@@ -1,0 +1,13 @@
+<form align="center" method="POST"> {% csrf_token %}
+	<style type="text/css">
+	p.serif {
+		font-family: "Times New Roman", Times, serif;
+	}
+	</style>
+    <h3><p class="serif"><u>Add stock</u></p></h1>
+    {{ context_form.as_p }}
+<input type='submit' value='Save' class="btn btn-danger"> 
+<a href="/"><button type="button" class="btn btn-danger">Back</button></a>                                                                                         
+</form>
+
+

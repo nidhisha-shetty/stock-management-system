@@ -1,0 +1,9 @@
+<form action="." method='POST'>{% csrf_token %}
+	<h3><p class="serif" align="center"><u> Editing stock </u></p></h1>
+
+	<h5><p class="serif" style="color: red;"> You are editing "{{ object.product_name }}" product!</p></h5>
+	{{ my_form.as_p }}
+	
+	<input type="submit" value="Save" button type="button" class="btn btn-danger btn-sm"/>
+    <a href="/"><button type="button" class="btn btn-danger btn-sm">Back</button></a></p>
+</form>

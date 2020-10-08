@@ -1,0 +1,35 @@
+<h1>Stock details</h1>
+<!DOCTYPE html>
+<html>
+<head> 
+	<title>Stock Details</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<style type="text/css">
+  .text-my-own-color {
+  color: #000000 !important; 
+}
+</style>
+<p align="right"><a href="add/"><button type="button" class="btn btn-secondary btn-sm"> Add stock</button></a></p>
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">Product name</th>
+            <th scope="col">In stock (units)</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for x in stock_context %}
+    <tr>
+        <td>{{ x.product_name }}</td>
+        <td>{{ x.no_of_items_left }}</td>
+        <td><a href='{{x.get_absolute_url_edit}}'> <button type="button" class="btn btn-secondary btn-sm">Edit stock</button></a></td>
+        <td><a href="{{x.get_absolute_url_delete}}"> <button type="button" class="btn btn-secondary btn-sm">Delete stock</button></a></td>	
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
