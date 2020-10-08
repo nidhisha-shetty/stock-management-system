@@ -1,5 +1,5 @@
 # Django-MongoDB
-This is a stock management app built using Django having MongoDB as a database that allows a users to manage and update the stock data of a store.
+This is a inventory management app built using Django having MongoDB as a database that allows a user to manage and update the inventory data of a store.
 
 ## Installing and executing the app
 ```
